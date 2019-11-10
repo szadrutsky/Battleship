@@ -1,0 +1,7 @@
+/.vs
+/Battleship.API/bin
+/Battleship.API/obj
+/Battleship.Domain/obj
+/Battleship.Domain/bin
+/Battleship.Tests/bin
+/Battleship.Tests/obj
