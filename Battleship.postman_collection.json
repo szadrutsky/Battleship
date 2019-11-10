@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "cddc86b8-5ed1-48b1-8fba-597a8e242f87",
+		"name": "Battleship",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost",
+			"item": [
+				{
+					"name": "CreateBoard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:12144/api/BattleShip/CreateBoard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12144",
+							"path": [
+								"api",
+								"BattleShip",
+								"CreateBoard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PlaceShip",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"BoardId\":\"c98b2780-97e0-4473-abb5-c292477a1e71\",\n\t\"Ship\":{\n\t\t\"From\": {\n\t\t\t\"Letter\": \"F\",\n\t\t\t\"Number\": 4\n\t\t},\n    \t\"To\": {\n    \t\t\"Letter\": \"H\",\n\t\t\t\"Number\": 4\n    \t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:12144/api/BattleShip/PlaceShip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12144",
+							"path": [
+								"api",
+								"BattleShip",
+								"PlaceShip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attack",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"BoardId\":\"c98b2780-97e0-4473-abb5-c292477a1e71\",\n\t\"Location\":{\n\t\t\"Letter\": \"F\",\n\t\t\"Number\": 4\n\t\t\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:12144/api/BattleShip/Attack",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "12144",
+							"path": [
+								"api",
+								"BattleShip",
+								"Attack"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Azure",
+			"item": [
+				{
+					"name": "CreateBoard Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://battleshipapi20191110045701.azurewebsites.net/api/BattleShip/CreateBoard",
+							"protocol": "http",
+							"host": [
+								"battleshipapi20191110045701",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"BattleShip",
+								"CreateBoard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PlaceShip Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"BoardId\":\"446cccc4-2b5d-493b-b353-c6095a33e2ef\",\n\t\"Ship\":{\n\t\t\"From\": {\n\t\t\t\"Letter\": \"F\",\n\t\t\t\"Number\": 4\n\t\t},\n    \t\"To\": {\n    \t\t\"Letter\": \"H\",\n\t\t\t\"Number\": 4\n    \t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://battleshipapi20191110045701.azurewebsites.net/api/BattleShip/PlaceShip",
+							"protocol": "http",
+							"host": [
+								"battleshipapi20191110045701",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"BattleShip",
+								"PlaceShip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attack Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"BoardId\":\"446cccc4-2b5d-493b-b353-c6095a33e2ef\",\n\t\"Location\":{\n\t\t\"Letter\": \"F\",\n\t\t\"Number\": 4\n\t\t\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://battleshipapi20191110045701.azurewebsites.net/api/BattleShip/Attack",
+							"protocol": "http",
+							"host": [
+								"battleshipapi20191110045701",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"BattleShip",
+								"Attack"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

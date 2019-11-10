@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Battleship.Domain.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Battleship.API
 {
@@ -24,6 +19,8 @@ namespace Battleship.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddSingleton<IStateTrackingService, StateTrackingService> ();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,6 +30,7 @@ namespace Battleship.API
             {
                 app.UseDeveloperExceptionPage();
             }
+            
 
             app.UseMvc();
         }
